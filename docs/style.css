@@ -6,6 +6,16 @@ body {
   color: #333;
 }
 
+header h1 {
+  margin-bottom: 10px;
+  font-size: 42px;
+}
+
+header p {
+  font-size: 18px;
+  margin-top: 0;
+}
+
 header {
   background-color: #1f2937;
   color: white;
@@ -22,8 +32,9 @@ nav {
 nav a {
   color: white;
   text-decoration: none;
-  margin: 0 15px;
+  margin: 0 20px;
   font-weight: bold;
+  font-size: 17px;
 }
 
 section {
