@@ -18,3 +18,6 @@ This folder will contain the React frontend for the Task Manager App.
 - React
 - CSS
 - Axios
+
+## First Build Step
+- Set up the React frontend app structure for Version 1.
