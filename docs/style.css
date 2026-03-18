@@ -48,6 +48,12 @@ section {
 
 h2 {
   color: #1f2937;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+section p {
+  max-width: 900px;
 }
 
 ul {
