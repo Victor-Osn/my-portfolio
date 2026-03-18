@@ -88,3 +88,11 @@ nav a:hover {
 h1 {
   letter-spacing: 0.5px;
 }
+
+ul li {
+  margin-bottom: 10px;
+}
+
+section {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
