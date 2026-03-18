@@ -5,7 +5,7 @@ This project will be a full-stack task management application.
 ## Purpose
 The app will help users create, update, organize, and track daily tasks.
 
-## Planned Features
+## Planned Features for Version 1
 - Add a new task
 - View all tasks in one place
 - Mark a task as completed
