@@ -2,12 +2,17 @@
 
 This folder will contain the React frontend for the Task Manager App.
 
-## Planned Responsibilities
-- Display tasks
-- Add new tasks
-- Edit tasks
-- Delete tasks
-- Mark tasks as completed
+## Version 1 Pages and Components
+- Main page
+- Task form component
+- Task list component
+- Task item component
+
+## Version 1 Responsibilities
+- Display all tasks
+- Add a new task
+- Mark a task as completed
+- Delete a task
 
 ## Main Tools
 - React
