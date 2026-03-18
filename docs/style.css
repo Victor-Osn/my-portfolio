@@ -80,3 +80,11 @@ body {
 p, li {
   font-size: 18px;
 }
+
+nav a:hover {
+  color: #d1d5db;
+}
+
+h1 {
+  letter-spacing: 0.5px;
+}
