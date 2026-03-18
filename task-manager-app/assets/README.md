@@ -1,9 +1,9 @@
 # Assets
 
-This folder will store screenshots, diagrams, and project images for the Task Manager App.
+This folder will store visual materials for the Task Manager App.
 
-## Possible Files
+## Planned Files
 - App screenshots
 - UI mockups
-- Architecture diagrams
+- Architecture diagram
 - Demo images
