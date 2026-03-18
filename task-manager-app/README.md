@@ -7,12 +7,9 @@ The app will help users create, update, organize, and track daily tasks.
 
 ## Planned Features
 - Add a new task
-- Edit a task
-- Delete a task
-- Mark a task as completed
 - View all tasks in one place
-- Search tasks
-- Filter tasks by completed or pending status
+- Mark a task as completed
+- Delete a task
 
 ## Tech Stack
 - React
