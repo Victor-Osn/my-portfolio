@@ -16,6 +16,19 @@ The app will help users create, update, organize, and track daily tasks.
 - Search tasks
 - Filter tasks by completed or pending status
 
+## Version 1 Frontend
+- Single main page
+- Task input form
+- Task list display
+- Complete task button
+- Delete task button
+
+## Version 1 Backend API
+- GET /tasks
+- POST /tasks
+- PUT /tasks/:id
+- DELETE /tasks/:id 
+
 ## Tech Stack
 - React
 - Node.js
