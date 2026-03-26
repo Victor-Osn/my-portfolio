@@ -52,3 +52,12 @@ button:hover {
 .task-text {
     font-size: 16px;
 }
+
+.app-container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+p {
+    color: #374151;
+}
