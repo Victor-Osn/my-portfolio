@@ -1,10 +1,26 @@
-function TaskForm() {
-  return (
-    <div>
-      <h2>Task Form</h2>
-      <p>This component will handle adding a new task.</p>
-    </div>
-  );
+import { useState } from "react";
+
+function TaskForm({ onAddTask }) {
+    const [taskText, setTaskText] = useState("");
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        onAddTask(taskText);
+        setTaskText("");
+    };
+
+    return (
+        <form onSubmit={handleSubmit}>
+            <h2>Add Task</h2>
+            <input
+                type="text"
+                placeholder="Enter a task"
+                value={taskText}
+                onChange={(e) => setTaskText(e.target.value)}
+            />
+            <button type="submit">Add Task</button>
+        </form>
+    );
 }
 
 export default TaskForm;
