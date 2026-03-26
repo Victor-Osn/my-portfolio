@@ -1,6 +1,6 @@
 import TaskItem from "./TaskItem";
 
-function TaskList({ tasks }) {
+function TaskList({ tasks, onToggleTask, onDeleteTask }) {
     return (
         <div>
             <h2>Task List</h2>
@@ -8,7 +8,12 @@ function TaskList({ tasks }) {
                 <p>No tasks available.</p>
             ) : (
                 tasks.map((task) => (
-                    <TaskItem key={task.id} task={task} />
+                    <TaskItem
+                        key={task.id}
+                        task={task}
+                        onToggleTask={onToggleTask}
+                        onDeleteTask={onDeleteTask}
+                    />
                 ))
             )}
         </div>
