@@ -21,13 +21,29 @@ function App() {
         setTasks([...tasks, newTask]);
     };
 
+    const toggleTask = (taskId) => {
+        setTasks(
+            tasks.map((task) =>
+                task.id === taskId ? { ...task, completed: !task.completed } : task
+            )
+        );
+    };
+
+    const deleteTask = (taskId) => {
+        setTasks(tasks.filter((task) => task.id !== taskId));
+    };
+
     return (
         <div>
             <h1>Task Manager App</h1>
             <p>Version 1 frontend setup in progress.</p>
 
             <TaskForm onAddTask={addTask} />
-            <TaskList tasks={tasks} />
+            <TaskList
+                tasks={tasks}
+                onToggleTask={toggleTask}
+                onDeleteTask={deleteTask}
+            />
         </div>
     );
 }
