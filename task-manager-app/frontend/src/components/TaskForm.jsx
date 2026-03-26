@@ -17,6 +17,7 @@ function TaskForm({ onAddTask }) {
                 placeholder="Enter a task"
                 value={taskText}
                 onChange={(e) => setTaskText(e.target.value)}
+                required
             />
             <button type="submit">Add Task</button>
         </form>
