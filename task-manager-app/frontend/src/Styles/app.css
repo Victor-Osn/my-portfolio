@@ -61,3 +61,15 @@ button:hover {
 p {
     color: #374151;
 }
+
+form input {
+    margin-bottom: 10px;
+}
+
+form button {
+    margin-top: 10px;
+}
+
+.task-item button {
+    margin-top: 8px;
+}
