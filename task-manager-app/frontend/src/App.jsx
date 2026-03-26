@@ -34,7 +34,7 @@ function App() {
     };
 
     return (
-        <div>
+        <div className="app-container">
             <h1>Task Manager App</h1>
             <p>Version 1 frontend setup in progress.</p>
 
