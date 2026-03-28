@@ -14,10 +14,7 @@ app.use(cors());
 app.use(express.json());
 
 // Temporary in-memory task list for Version 1
-let tasks = [
-    { id: 1, text: "Finish backend setup", completed: false },
-    { id: 2, text: "Connect frontend to backend", completed: false }
-];
+let tasks = [];
 
 // GET all tasks
 app.get("/tasks", (req, res) => {
