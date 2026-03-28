@@ -74,4 +74,13 @@ form button {
     margin-top: 8px;
 }
 
+message {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    padding: 10px 14px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
 
