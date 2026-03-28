@@ -31,8 +31,10 @@ function App() {
             });
 
             setTasks([...tasks, response.data]);
+            alert("Task added successfully");
         } catch (error) {
             console.error("Error adding task:", error);
+            alert("Failed to add task");
         }
     };
 
@@ -40,13 +42,17 @@ function App() {
     const toggleTask = async (taskId) => {
         try {
             const response = await axios.put(http://localhost:5000/tasks/${taskId});
+
             setTasks(
                 tasks.map((task) =>
                     task.id === taskId ? response.data : task
                 )
             );
+
+            alert("Task updated successfully");
         } catch (error) {
             console.error("Error updating task:", error);
+            alert("Failed to update task");
         }
     };
 
