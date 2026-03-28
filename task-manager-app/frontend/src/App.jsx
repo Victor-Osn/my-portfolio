@@ -5,15 +5,24 @@ import TaskForm from "./components/TaskForm";
 import TaskList from "./components/TaskList";
 
 function App() {
-    // Stores all tasks from the backend
     const [tasks, setTasks] = useState([]);
+    const [message, setMessage] = useState("");
 
-    // Fetch tasks once when the app loads
+    // Load tasks from the backend when the app starts
     useEffect(() => {
         fetchTasks();
     }, []);
 
-    // Get all tasks from the backend API
+    useEffect(() => {
+        if (message) {
+            const timer = setTimeout(() => {
+                setMessage("");
+            }, 3000);
+    
+            return () => clearTimeout(timer);
+        }
+    }, [message]);
+
     const fetchTasks = async () => {
         try {
             const response = await axios.get("http://localhost:5000/tasks");
@@ -27,51 +36,51 @@ function App() {
     const addTask = async (taskText) => {
         try {
             const response = await axios.post("http://localhost:5000/tasks", {
-                text: taskText
+                 text: taskText
             });
 
             setTasks([...tasks, response.data]);
-            alert("Task added successfully");
+            setMessage("Task added successfully");
         } catch (error) {
             console.error("Error adding task:", error);
-            alert("Failed to add task");
+            setMessage("Failed to add task");
         }
+
     };
 
     // Toggle a task's completed status
     const toggleTask = async (taskId) => {
         try {
-            const response = await axios.put(http://localhost:5000/tasks/${taskId});
-
+            const response = await axios.put(`http://localhost:5000/tasks/${taskId}`);
+    
             setTasks(
                 tasks.map((task) =>
                     task.id === taskId ? response.data : task
                 )
             );
-
-            alert("Task updated successfully");
+    
+            setMessage("Task updated successfully");
         } catch (error) {
             console.error("Error updating task:", error);
-            alert("Failed to update task");
+            setMessage("Failed to update task");
         }
     };
 
-    // Delete a task from the backend and show a success or failure alert
     const deleteTask = async (taskId) => {
         try {
-            await axios.delete(http://localhost:5000/tasks/${taskId});
+            await axios.delete(`http://localhost:5000/tasks/${taskId}`);
             setTasks(tasks.filter((task) => task.id !== taskId));
-            alert("Task deleted successfully");
+            setMessage("Task deleted successfully");
         } catch (error) {
             console.error("Error deleting task:", error);
-            alert("Failed to delete task");
+            setMessage("Failed to delete task");
         }
     };
 
-    // Main app UI
     return (
         <div className="app-container">
             <h1>Task Manager App</h1>
+            {message && <p className="message">{message}</p>}
 
             <TaskForm onAddTask={addTask} />
             <TaskList
