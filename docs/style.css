@@ -101,13 +101,13 @@ ul li {
 }
 
 section a {
-    color: #2563eb;
+    color: #60a5fa;
     font-weight: 600;
     text-decoration: underline;
 }
 
 section a:hover {
-    color: #1d4ed8;
+    color: #93c5fd;
 }
 
 footer {
@@ -144,5 +144,3 @@ footer {
         padding: 20px;
     }
 }
-
-
